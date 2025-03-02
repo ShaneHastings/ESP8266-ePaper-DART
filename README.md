@@ -7,12 +7,18 @@ Display Irish Rail DART times on an ePaper Display using an ESP8266.
 
 Run a tiny web server on an ESP8266 device connected to an ePaper display, parse JSON data sent via a HTTP POST request and display the contents on the connected display.
 
+## Improvements
+- Ideally this should work the other way around (i.e. the ESP8266 itself reaches out for the data) but for now I have a cron job set up to POST the data at regular intervals.
+
+- The ability to define several WiFi networks, so that the ESP8266 can connect in various locations (home, office). Cycle through a list at boot and exit the loop once connected. (first step also a pre-requisite for this)
+
+
 ## Requirements
 
 - Arduino IDE
 - ePaper Display
   - I am using a WeAct 2.13" model from AliExpress, costs about €8.
-- ESP8266 (likely workable on an ESP32 too)
+- ESP8266 (likely workable on an ESP32 too with some tweaking)
 - WiFI Network
 
 ## Example
